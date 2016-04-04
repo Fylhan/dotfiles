@@ -1,0 +1,8 @@
+" Discard compatibility with Vi
+set nocompatible
+" Load also config from config directory
+runtime! config/**/*.vim
+" Initialise pathogen
+call pathogen#infect()
+call pathogen#helptags()
+

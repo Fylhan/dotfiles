@@ -1,0 +1,21 @@
+[core]
+	filemode = true
+	autocrlf = input
+[user]
+	name = Olivier Maridat
+	email = olivier.maridat@trialog.com
+	company = Trialog
+[alias]
+	co = checkout
+	br = branch
+	ci = commit -a -m
+	st = status
+	last = log -1 HEAD 
+	lasts = log -35 --pretty=tformat:"%C(red)%h%x20%C(magenta)%ad%C(auto)%d%x20%C(green)%s%C(white)%x20-%x20%an%C(auto)" --date=short --abbrev-commit --graph --decorate
+	lastpull = !git lasts HEAD --stat --no-merges
+	unstage = reset HEAD --
+	undo = git reset --soft HEAD^
+	showtag = !sh -c 'git rev-parse $1 | xargs git cat-file -p' -
+
+[push]
+	default = simple

@@ -1,0 +1,41 @@
+EDITOR='vim'
+
+### PATH
+Windows=/media/windows
+VPN=$Windows/Users/olivierm/Dropbox/Trialog/vpn
+
+TProject=/media/Project
+Project=/media/data/Projet
+Web=/media/data/Web
+
+EV=$Project/PlateformeEV/04-Workspace
+ISO15118=$EV/../05-Code/ISO-IEC-15118-M2M
+OCPP=$EV/../05-Code/OCPP-Central-system
+TCanP=$Project/TCanP
+RDocEco2=$Project/Eco2Charge/04-Workspace
+NDocEco2=$Project/Nexans_Eco2Charge/04-Workspace
+REco2=${RDocEco2}/../05-Code
+NEco2=${NDocEco2}/../05-Code
+RSC=$Project/Renault_RSC/04-Workspace
+Gireve=$Project/GIREVE
+Valeo=$Project/ValeoCybersec
+Velcri=$Project/Velcri/velcri-bckp
+
+Dropbox=$Windows/Users/olivierm/Dropbox
+Qomp=$Project/Test/qompoter
+RQomp=/media/data/qompoter
+Kanb=$Web/Test/kanboard
+Bnbox=$Web/Perso/bnbox
+Cep=$Web/Perso/cep-saint-maur
+
+### Brew
+# Until LinuxBrew is fixed, the following is required.
+# See: https://github.com/Homebrew/linuxbrew/issues/47
+export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:/usr/local/lib64/pkgconfig:/usr/lib64/pkgconfig:/usr/lib/pkgconfig:/usr/lib/x86_64-linux-gnu/pkgconfig:/usr/lib64/pkgconfig:/usr/share/pkgconfig:$PKG_CONFIG_PATH
+## Setup linux brew
+export LINUXBREWHOME=~/.linuxbrew
+export PATH=$LINUXBREWHOME/bin:$PATH
+export MANPATH=$LINUXBREWHOME/man:$MANPATH
+export PKG_CONFIG_PATH=$LINUXBREWHOME/lib64/pkgconfig:$LINUXBREWHOME/lib/pkgconfig:$PKG_CONFIG_PATH
+export LD_LIBRARY_PATH=$LINUXBREWHOME/lib64:$LINUXBREWHOME/lib:$LD_LIBRARY_PATH
+
