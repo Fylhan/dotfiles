@@ -1,5 +1,13 @@
 *
-!.*
-!*.sh
+!.bash_aliases
+!.bash_env
+!.bashrc
+!.gitconfig
+!.inputrc
+!.profile
+!.selected_editor
+!.tmux.conf
+!.vimrc
 !.vim/*
-!.config/*
+!bin/
+
