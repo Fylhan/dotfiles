@@ -19,6 +19,9 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../..'
 
+# chmod
+alias chmodf='find $2 -type f -exec chmod $1 {} \;'
+alias chmodd='find $2 -type d -exec chmod $1 {} \;'
 # refresh shell
 alias reload='source ~/.bashrc'
 

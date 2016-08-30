@@ -160,16 +160,24 @@ if [ ! -d "${LOCAL_DELIVERY}" ]; then mkdir ${LOCAL_DELIVERY} ; fi
 cat << EOF > ${LOCAL_DIR}/sync.sh
 #!/usr/bin/env bash
 
+echo `date` \
+  > ${LOCAL_DIR}/cron.log
+
+echo ""
+echo "Synchronise 'Management'"
 rsync -avrltD --stats --human-readable \
-  ${LOCAL_MANAGEMENT} \
+  ${LOCAL_MANAGEMENT}/* \
   ${REMOTE_MANAGEMENT} \
   | pv -lep -s 42 \
-  > ${LOCAL_DIR}cron.log
+  >> ${LOCAL_DIR}/cron.log
+
+echo ""
+echo "Synchronise 'Delivery'"
 rsync -avrltD --stats --human-readable \
-  ${LOCAL_DELIVERY} \
+  ${LOCAL_DELIVERY}/* \
   ${REMOTE_DELIVERY} \
   | pv -lep -s 42 \
-  >> ${LOCAL_DIR}cron.log
+  >> ${LOCAL_DIR}/cron.log
 EOF
 
 echo ""

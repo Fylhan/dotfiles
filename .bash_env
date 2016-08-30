@@ -23,7 +23,9 @@ RSC=$Project/Renault_RSC/04-Workspace
 Gireve=$Project/GIREVE
 Valeo=$Project/ValeoCybersec
 Velcri=$Project/Velcri/velcri-bckp
-Watt=$Project/WattConsulting/04_Workspace
+Watt=$Project/WattWell/04_Workspace
+	Combo=$Watt/../05_Code/combo-evse
+	SLAC=$Watt/../05_Code/PLCModemController
 BienVEnu=$Project/BienVEnu/04-Workspace
 
 Dropbox=$Windows/Users/olivierm/Dropbox
