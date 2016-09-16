@@ -28,6 +28,7 @@ Watt=$Project/WattWell/04_Workspace
 	SLAC=$Watt/../05_Code/PLCModemController
 BienVEnu=$Project/BienVEnu/04-Workspace
 
+hubiC=/media/data/hubiC
 Dropbox=$Windows/Users/olivierm/Dropbox
 Qomp=$Project/Test/qompoter
 RQomp=/media/data/qompoter

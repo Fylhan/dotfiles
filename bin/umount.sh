@@ -1,5 +1,6 @@
 #!/bin/sh
-umount /media/Project || lsof /media/Project
-umount /media/wontstay
-umount /media/Trialog || lsof /media/Project
-umount /media/User
+umount -f /media/Project
+umount -f /media/wontstay
+umount -f /media/Trialog
+#|| lsof /media/Trialog
+umount -f /media/User
